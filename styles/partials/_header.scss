@@ -1,0 +1,86 @@
+// Background behind top Nav Bar
+.contact-menu {
+    background-color: $brandGrey;
+}
+
+// Nav Bar containing contact information
+.contact-menu_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-menu_contact-info,
+.contact-menu_nav {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contact-menu_contact-info {
+    flex-basis: calc(100% / 3 * 2);
+    .contact-menu_contact-info_option {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contact-menu_nav {
+    flex-basis: calc(100% / 3);
+    .contact-menu_nav_language-pref,
+    ul {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// Nav Bar company information
+.company-info-container {
+    display: flex;
+    justify-content: space-between;
+    .company-info_column {
+        flex-basis: 20%;
+        display: flex;
+    }
+    .company-info_column:nth-child(1) {
+        flex-basis: calc(30% - 50px);
+        margin-right: 50px;
+    }
+}
+
+// Main Nav Bar
+.nav-bar {
+    background-color: $brandBlue;
+    display: flex;
+    justify-content: space-between;
+    ul {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+// Header Content
+.header-content {
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(../assets/header-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .carousel-control,
+    .carousel-control {
+        position: absolute;
+    }
+    .carousel-control-previous {
+        left: 0;
+    }
+    .carousel-control-next {
+        right: 0;
+    }
+}
+
+.header-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}

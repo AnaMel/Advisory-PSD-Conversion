@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Advisory</title>
 </head>
 <body>
     <header>
 <!-- Contact Options Menu -->
         <div class="contact-menu">
-            <div class="wrapper">
+            <div class="wrapper contact-menu_container">
                 <div class="contact-menu_contact-info">
-
+                    <div class="contact-menu_contact-info_option">
+                        <img src="assets/phone.svg" alt="Phone">
+                        <p>+88 01912704287</p>
+                    </div>
+                    <div class="contact-menu_contact-info_option">
+                        <img src="assets/express-post.svg" alt="Phone">
+                        <p>Perfect_help@gmail.com</p>
+                    </div>
                 </div>
                 <div class="contact-menu_nav">
                     <div class="contact-menu_nav_language-pref">
-
+                        <img src="" alt="Chineese Language">
+                        <p>English</p>
                     </div>
                     <ul>
-                        <li>About</li>
-                        <li>Claim&Policy</li>
-                        <li>Register</li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Claim&Policy</a></li>
+                        <li><a href="">Register</a></li>
                     </ul>
                 </div>
             </div>
@@ -29,36 +38,77 @@
 <!-- End of Contact Options menu -->
 <!-- Company Info header section -->
         <div class="company-info">
-            <div class="wrapper">
-                <div class="company-info_column"></div>
-                <div class="company-info_column"></div>
-                <div class="company-info_column"></div>
-                <div class="company-info_column"></div>
+            <div class="wrapper company-info-container">
+                <div class="company-info_column">
+                    <div class="company-info_column_image">
+                        <img src="assets/brand-logo.svg" alt="Lock">
+                    </div>
+                    <div class="company-info_column_description">
+                        <p class="brand-logo">Advisory</p>
+                        <p>Perfect Business Solution</p>
+                    </div>
+                </div>
+                <div class="company-info_column">
+                    <div class="company-info_column_image">
+                        <img src="assets/internet.svg" alt="Lock">
+                    </div>
+                    <div class="company-info_column_description">
+                        <p>Main Office</p>
+                        <p>136 advice the good, CA</p>
+                    </div>
+                </div>
+                <div class="company-info_column">
+                    <div class="company-info_column_image">
+                        <img src="assets/stopwatch.svg" alt="Lock">
+                    </div>
+                    <div class="company-info_column_description">
+                        <p>Opening Time</p>
+                        <p>Mon-Sat 09.00 to 19.00</p>
+                    </div>
+                </div>
+                <div class="company-info_column">
+                    <a href="" class="consultation-button">free consultation</a>
+                </div>
             </div>
         </div>
 <!-- End of Company Info header section -->
 <!-- Main Nav Bar -->
         <nav>
-            <div class="nav_column">
-                <ul>
-                    <li><a href="">home</a></li>
-                    <li><a href="">about us</a></li>
-                    <li><a href="">services</a></li>
-                    <li><a href="">projects</a></li>
-                    <li><a href="">blog</a></li>
-                    <li><a href="">shop</a></li>
-                    <li class="contact-us">Contact</li>
-                </ul>
+            <div class="wrapper nav-bar">
+                <div class="nav_column">
+                    <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="">about us</a></li>
+                        <li><a href="">services</a></li>
+                        <li><a href="">projects</a></li>
+                        <li><a href="">blog</a></li>
+                        <li><a href="">shop</a></li>
+                        <li class="contact-us">Contact</li>
+                    </ul>
+                </div>
+                <div class="nav_column">
+                    <img src="assets/shop-bag.svg" alt="Shopping bag">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="nav_column">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                </div>
             </div>
-            <div class="nav_column"></div>
-            <div class="nav_column"></div>
         </nav>
 <!-- End of Main Nav Bar -->
 <!-- Main Content in the header -->
         <div class="header-content">
-            <img src="" alt="carousel-control-previous">
-            <img src="" alt="carousel-control-next">
-            <div class="wrapper">
+            <div class="carousel-control carousel-control-previous">
+                <img src="" alt="carousel-control-previous">
+            </div>
+            <div class="carousel-control carousel-control-next">
+                <img src="" alt="carousel-control-next">
+            </div>
+            <div class="wrapper header-content-container">
                 <h1>Advisory Business Consulting Services</h1>
                 <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, maiores? Ipsa dignissimos laudantium, perspiciatis, corrupti maxime accusamus illum natus obcaecati consequuntur, amet quidem deserunt. Ut, velit?</p>
                 <input type="submit" class="action" value="Meet Our Expert">
@@ -239,30 +289,30 @@
                     <p class="header-description">From Our Blog</p>
                     <h2>Latest News</h2>
                 </div>
-            </div>
-            <div class="options-container_info">
-                <p class="introduction">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita molestias impedit fugiat officiis doloribus rem optio
-                    fugit ex molestiae perspiciatis.</p>
-                <a href="" class="action">More News</a>
-            </div>
-            <div class="grid">
-                <div class="grid-option">
-                    <img src="" alt="Young woman in front of a desktop">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta velit, quos tempore esse inventore.</p>
-                    <p class="date">Lorem, ipsum dolor.</p>
+                <div class="options-container_info">
+                    <p class="introduction">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita molestias impedit fugiat officiis doloribus rem optio
+                        fugit ex molestiae perspiciatis.</p>
+                    <a href="" class="action">More News</a>
                 </div>
-                <div class="grid-option">
-                    <img src="" alt="Two Mac laptops">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta velit, quos tempore esse inventore.</p>
-                    <p class="date">Lorem, ipsum dolor.</p>
-                </div>
-                <div class="grid-option">
-                    <img src="" alt="Young man working on Mac">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta velit, quos tempore esse inventore.</p>
-                    <p class="date">Lorem, ipsum dolor.</p>
+                <div class="grid">
+                    <div class="grid-option">
+                        <img src="" alt="Young woman in front of a desktop">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta velit, quos tempore esse inventore.</p>
+                        <p class="date">Lorem, ipsum dolor.</p>
+                    </div>
+                    <div class="grid-option">
+                        <img src="" alt="Two Mac laptops">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta velit, quos tempore esse inventore.</p>
+                        <p class="date">Lorem, ipsum dolor.</p>
+                    </div>
+                    <div class="grid-option">
+                        <img src="" alt="Young man working on Mac">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique soluta velit, quos tempore esse inventore.</p>
+                        <p class="date">Lorem, ipsum dolor.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -296,18 +346,18 @@
                     <p>143, New York, NY 10018</p>
                 </div>
             </div>
-        </div>
-        <div class="grid">
-            <div class="footer-column"></div>
-            <div class="footer-column"></div>
-            <div class="footer-column"></div>
-        </div>
-        <div class="copyright-container">
-            <div class="copyright">
-                <p>Copyrigth 2017, All Rights Reserved, 360degree</p>
+            <div class="grid">
+                <div class="footer-column"></div>
+                <div class="footer-column"></div>
+                <div class="footer-column"></div>
             </div>
-            <div class="footer_social-media">
-                
+            <div class="copyright-container">
+                <div class="copyright">
+                    <p>Copyrigth 2017, All Rights Reserved, 360degree</p>
+                </div>
+                <div class="footer_social-media">
+
+                </div>
             </div>
         </div>
     </footer>
