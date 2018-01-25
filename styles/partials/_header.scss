@@ -20,6 +20,7 @@
     .contact-menu_contact-info_option {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -29,6 +30,7 @@
     ul {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -36,13 +38,35 @@
 .company-info-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    .brand-logo {
+        font-weight: 700;
+        font-size: 3.2rem;
+    }
     .company-info_column {
         flex-basis: 20%;
         display: flex;
+        align-items: center;
     }
     .company-info_column:nth-child(1) {
         flex-basis: calc(30% - 50px);
         margin-right: 50px;
+    }
+}
+
+.consultation-button {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border: 2px solid $brandBlue;
+    // border-bottom-right-radius: 0;
+    // border-top-left-radius: 0;
+    transition: 0.3s;
+    &:hover,
+    &:focus {
+        color: $brandWhite;
+        background-color: $brandBlue;
+        padding: 12px 17px;
+        // border-top-left-radius: 25%;
     }
 }
 
@@ -72,10 +96,10 @@
         position: absolute;
     }
     .carousel-control-previous {
-        left: 0;
+        left: 25px;
     }
     .carousel-control-next {
-        right: 0;
+        right: 25px;
     }
 }
 
@@ -83,4 +107,11 @@
     display: flex;
     flex-direction: column;
     justify-items: center;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    padding: 20px 21.4px;
+    background-color: $brandDarkGrey;
+    border-radius: 50%;
 }

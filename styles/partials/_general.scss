@@ -9,6 +9,10 @@ p {
 a {
     text-decoration: none;
     color: $brandBlack;
+    &:hover,
+    &:focus {
+        color: salmon;
+    }
 }
 
 ul {
@@ -25,3 +29,36 @@ body {
     margin: 0 auto;
 }
 
+// General Color & Fonts
+.nav_column .fa {
+    font-size: 1.6rem;
+    color: $brandWhite;
+    &:hover,
+    &:focus {
+        color: salmon;
+    }
+}
+
+.colour-emphasize {
+    color: $brandBlue;
+}
+
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p.brand-logo {
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+
+// Remove input[type=submit] default browser styles
+input[type=submit] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 15px;
+}
