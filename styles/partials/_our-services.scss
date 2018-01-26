@@ -2,4 +2,23 @@
 
 .our-services {
     background-color: $brandGrey;
+    .grid_option {
+        // flex-basis: ()
+        background-color: $brandWhite;
+        padding: 75px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .grid_option_name {
+            margin-bottom: 25px;
+            @include paragraph(2.2rem, $brandBlack);
+        }
+        img {
+            margin-bottom: 15px;
+            max-height: 46px;
+        }
+        p {
+            text-align: center;
+        }
+    }
 }

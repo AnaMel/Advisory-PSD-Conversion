@@ -96,7 +96,6 @@ input[type=submit] {
     .header-description {
         margin-bottom: 25px;
         @include headers(1.8rem, $brandBlue);
-
     }
     .description {
         margin: 50px 0;
@@ -128,7 +127,15 @@ input[type=submit] {
 .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     .grid_option {
-        flex-basis: calc(100% / 3);
+        flex-basis: calc(100% / 3 - 10px);
+        margin-bottom: 20px;
     }
+}
+
+.introduction {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
 }

@@ -1,0 +1,34 @@
+.about-business_description {
+    flex-basis: calc(60% - 30px);
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .description {
+        margin: 25px 0 0;
+    }
+}
+
+.about-business_image {
+    flex-basis: 40%;
+}
+
+.about-business {
+    .grid {
+        margin-bottom: 50px;
+        .grid_option {
+            border: 1px solid $brandGrey;
+            padding: 25px 15px;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.option-header {
+            display: flex;
+            .option-header_img {
+                flex-basis: calc(15% - 10px);
+                margin-right: 10px;
+            }
+        }

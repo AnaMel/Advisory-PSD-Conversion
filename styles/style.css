@@ -136,8 +136,8 @@ h1, h2, h3, h4, p, a, ul {
   margin: 0;
   padding: 0; }
 
-image {
-  max-width: 100%;
+img {
+  width: 100%;
   display: block; }
 
 html {
@@ -274,10 +274,19 @@ input[type=submit] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   .grid .grid_option {
-    -ms-flex-preferred-size: calc(100% / 3);
-    flex-basis: calc(100% / 3); }
+    -ms-flex-preferred-size: calc(100% / 3 - 10px);
+    flex-basis: calc(100% / 3 - 10px);
+    margin-bottom: 20px; }
+
+.introduction {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem; }
 
 .contact-menu {
   background-color: #f3f3f3; }
@@ -451,6 +460,74 @@ input[type=submit] {
 
 .our-services {
   background-color: #f3f3f3; }
+  .our-services .grid_option {
+    background-color: #fcfcfc;
+    padding: 75px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .our-services .grid_option .grid_option_name {
+      margin-bottom: 25px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      letter-spacing: 0.2px;
+      font-size: 2.2rem;
+      color: #222222; }
+    .our-services .grid_option img {
+      margin-bottom: 15px;
+      max-height: 46px; }
+    .our-services .grid_option p {
+      text-align: center; }
+
+.about-business_description {
+  -ms-flex-preferred-size: calc(60% - 30px);
+  flex-basis: calc(60% - 30px); }
+  .about-business_description h2 {
+    margin-bottom: 20px; }
+  .about-business_description .description {
+    margin: 25px 0 0; }
+
+.about-business_image {
+  -ms-flex-preferred-size: 40%;
+  flex-basis: 40%; }
+
+.about-business .grid {
+  margin-bottom: 50px; }
+  .about-business .grid .grid_option {
+    border: 1px solid #f3f3f3;
+    padding: 25px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+
+.option-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .option-header .option-header_img {
+    -ms-flex-preferred-size: calc(15% - 10px);
+    flex-basis: calc(15% - 10px);
+    margin-right: 10px; }
+
+.statistics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .statistics .statistics_example {
+    -ms-flex-preferred-size: 25%;
+    flex-basis: 25%; }
 
 .testimonials {
   background-color: #2a86fa; }
