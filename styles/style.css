@@ -143,6 +143,28 @@ image {
 html {
   font-size: 10px; }
 
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 6rem;
+  color: #fcfcfc; }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 4rem;
+  color: #222222; }
+
+h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  font-size: 1.6rem;
+  color: #222222;
+  margin-bottom: 30px; }
+
 p {
   font-size: 1.6rem; }
 
@@ -160,7 +182,7 @@ body {
 
 .wrapper {
   max-width: 1280px;
-  width: 60%;
+  width: 65%;
   margin: 0 auto; }
 
 .nav_column .fa {
@@ -173,7 +195,12 @@ body {
   color: #2a86fa; }
 
 p {
-  font-family: 'Source Sans Pro', sans-serif; }
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  font-size: 1.6rem;
+  color: #222222; }
 
 p.brand-logo {
   font-family: 'Playfair Display', serif; }
@@ -183,7 +210,74 @@ input[type=submit] {
   -webkit-appearance: none;
   appearance: none;
   border: none;
-  padding: 15px; }
+  padding: 10px 15px;
+  width: 175px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  font-size: 1.6rem;
+  color: #fcfcfc;
+  background-color: #2a86fa; }
+
+.article-container {
+  margin: 75px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .article-container .header-description {
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 1.8rem;
+    color: #2a86fa; }
+  .article-container .description {
+    margin: 50px 0; }
+
+.action {
+  padding: 10px 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  font-size: 1.8rem;
+  color: #2a86fa; }
+
+.options-container {
+  padding: 75px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-line-pack: center;
+  align-content: center; }
+  .options-container .options-container_header {
+    text-align: center;
+    margin-bottom: 100px; }
+    .options-container .options-container_header .header-description {
+      margin-bottom: 10px;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      font-size: 1.8rem;
+      color: #222222; }
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .grid .grid_option {
+    -ms-flex-preferred-size: calc(100% / 3);
+    flex-basis: calc(100% / 3); }
 
 .contact-menu {
   background-color: #f3f3f3; }
@@ -296,7 +390,7 @@ input[type=submit] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  height: 80vh;
+  height: 85vh;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -320,10 +414,49 @@ input[type=submit] {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  justify-items: center; }
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 60vh; }
+  .header-content-container h1,
+  .header-content-container p {
+    width: 91%; }
+  .header-content-container p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    font-size: 1.6rem;
+    color: #fcfcfc; }
 
 .fa-chevron-left,
 .fa-chevron-right {
   padding: 20px 21.4px;
   background-color: #6f6f6f;
   border-radius: 50%; }
+
+.about-us_description {
+  -ms-flex-preferred-size: calc(70% - 61px);
+  flex-basis: calc(70% - 61px); }
+
+.about-us_free-offer {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+  margin-top: 50px;
+  padding: 30px 20px;
+  background-color: #f3f3f3;
+  border-right: 1px solid #2a86fa; }
+  .about-us_free-offer p {
+    margin-bottom: 25px; }
+
+.our-services {
+  background-color: #f3f3f3; }
+
+.testimonials {
+  background-color: #2a86fa; }
+
+.brand-belt {
+  background-color: #2a86fa; }
+
+footer {
+  background-color: #1a1a1a; }

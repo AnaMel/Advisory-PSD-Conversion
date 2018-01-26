@@ -2,6 +2,25 @@ html {
     font-size: 10px;
 }
 
+h1 {
+    @include headers(6rem, $brandWhite);
+}
+
+h2 {
+    @include headers(4rem, $brandBlack);
+    // line-height: 1;
+    // margin: 25px 0;
+}
+
+// h3 {
+//     @include headers(4rem, $brandBlack);
+// }
+
+h4 {
+    @include headers(1.6rem, $brandBlack);
+    margin-bottom: 30px;
+}
+
 p {
     font-size: 1.6rem;
 }
@@ -25,7 +44,7 @@ body {
 
 .wrapper {
     max-width: 1280px;
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
 }
 
@@ -44,7 +63,7 @@ body {
 }
 
 p {
-    font-family: 'Source Sans Pro', sans-serif;
+    @include paragraph(1.6rem, $brandBlack);
 }
 
 p.brand-logo {
@@ -60,5 +79,56 @@ input[type=submit] {
     -webkit-appearance: none;
     appearance: none;
     border: none;
-    padding: 15px;
+    padding: 10px 15px;
+    width: 175px;
+    @include paragraph(1.6rem, $brandWhite);
+    background-color: $brandBlue;
+}
+
+// .action::before {
+//     content: url(../../assets/button-arrow.png);
+// }
+
+.article-container {
+    margin: 75px 0;
+    display: flex;
+    justify-content: space-between;
+    .header-description {
+        margin-bottom: 25px;
+        @include headers(1.8rem, $brandBlue);
+
+    }
+    .description {
+        margin: 50px 0;
+    }
+}
+
+.action {
+    padding: 10px 25px;
+    @include paragraph(1.8rem, $brandBlue);
+}
+
+// General Styles for options/ gallery
+.options-container {
+    padding : 75px 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    // justify-content: center;
+    .options-container_header {
+        text-align: center;
+        margin-bottom: 100px;
+        .header-description {
+            margin-bottom: 10px;
+            @include headers(1.8rem, $brandBlack);
+            }
+    }
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    .grid_option {
+        flex-basis: calc(100% / 3);
+    }
 }

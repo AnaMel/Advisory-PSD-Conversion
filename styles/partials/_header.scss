@@ -87,7 +87,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
-    height: 80vh;
+    height: 85vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -106,7 +106,15 @@
 .header-content-container {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: space-between;
+    height: 60vh;
+    h1,
+    p {
+        width: 91%;
+    }
+    p {
+        @include paragraph(1.6rem, $brandWhite);
+    }
 }
 
 .fa-chevron-left,

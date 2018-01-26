@@ -2,6 +2,7 @@
 $brandBlue: rgb(42,134,250);
 $brandGrey: rgb(243,243,243);
 $brandBlack: rgb(34,34,34);
+$brandLightenBlack: rgb(26,26,26);
 $brandDarkGrey: rgb(111,111,111);
 $brandWhite: rgb(252,252,252);
 $brandButtonTextHover:rgb(11,85,99);
@@ -9,3 +10,20 @@ $brandButtonHover: rgba(175,222,220,0.2);
 
 
 // Font families
+
+@mixin headers($font-size, $color) {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: $font-size;
+    color: $color;
+}
+
+@mixin paragraph($font-size, $color) {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+    font-size: $font-size;
+    color: $color;
+}
