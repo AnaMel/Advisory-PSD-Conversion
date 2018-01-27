@@ -572,7 +572,7 @@ input[type=submit] {
 
 .testimonials {
   background-color: #2a86fa; }
-  .testimonials .testimonials-image {
+  .testimonials .testimonials_simage {
     -ms-flex-preferred-size: 40%;
     flex-basis: 40%; }
 
