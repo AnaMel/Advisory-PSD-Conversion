@@ -2,4 +2,7 @@
 
 .testimonials {
     background-color: $brandBlue;
+    .testimonials-image {
+        flex-basis: 40%;
+    }
 }

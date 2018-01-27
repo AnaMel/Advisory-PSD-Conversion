@@ -1,0 +1,11 @@
+.options-container_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    .introduction {
+        flex-basis: 80%;
+    }
+    .action {
+        padding: 0;
+    }
+}
