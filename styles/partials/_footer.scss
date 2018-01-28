@@ -2,4 +2,23 @@
 
 footer {
     background-color: $brandLightenBlack;
+    // position: relative;
+    .contact-details {
+        background-color: $brandLightenBlack;
+        padding: 25px 0;
+        position: relative;
+        top: -50px;
+        justify-content: space-around;
+    }
 }
+
+.footer_contact-details_option {
+        display: flex;
+        justify-content: center;
+        .icon {
+            margin-right: 15px;
+        }
+        p {
+            color: $brandWhite;
+        }
+    }

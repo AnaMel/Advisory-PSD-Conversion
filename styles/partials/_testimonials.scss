@@ -2,7 +2,29 @@
 
 .testimonials {
     background-color: $brandBlue;
-    .testimonials_simage {
-        flex-basis: 40%;
+    padding: 75px 0;
+    .article-container {
+        margin: 0;
+    }
+}
+
+.testimonials_image {
+            flex-basis: 40%;
+            min-width: 300px;
+            margin-right: 30px;
+            }
+
+.testimonials_content {
+    text-align: center;
+    padding: 10px 0;
+    p {
+        color: $brandWhite;
+    }
+    .introduction {
+        margin-bottom: 60px;
+    }
+    .name {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
     }
 }
