@@ -36,6 +36,9 @@ a {
 
 ul {
     list-style: none;
+    li a{
+        @include paragraph(1.6rem,$brandWhite)
+    }
 }
 
 body {
@@ -74,17 +77,27 @@ p.brand-logo {
 
 
 // Remove input[type=submit] default browser styles
-input[type=submit] {
+input {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     border: none;
     padding: 10px 15px;
+}
+
+
+input[type=submit] {
     width: 175px;
     @include paragraph(1.6rem, $brandWhite);
     background-color: $brandBlue;
 }
 
+input[type=email] {
+    background-color: rgb(44,43,43);
+    width: 250px;
+    margin-top: 20px;
+    padding: 15px 15px;
+}
 // .action::before {
 //     content: url(../../assets/button-arrow.png);
 // }
@@ -141,6 +154,6 @@ input[type=submit] {
     line-height: 2;
 }
 
-// .icon {
-//     max-height: 35px;
-// }
+.icon {
+    margin-right: 10px;
+}

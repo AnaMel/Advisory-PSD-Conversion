@@ -2,13 +2,26 @@
 
 footer {
     background-color: $brandLightenBlack;
-    // position: relative;
+    .grid {
+        margin-bottom: 50px;
+    }
+    p,
+    li a {
+        color: rgb(121,121,121);
+    }
     .contact-details {
-        background-color: $brandLightenBlack;
-        padding: 25px 0;
+        background-color: rgb(44,43,43);
+        padding: 20px 0;
         position: relative;
         top: -50px;
         justify-content: space-around;
+        box-shadow: 0 35px 0 -15px rgb(63,62,62);
+        .grid_option {
+            margin: 0;
+        }
+    }
+    input {
+
     }
 }
 
@@ -22,3 +35,47 @@ footer {
             color: $brandWhite;
         }
     }
+
+.footer-column {
+    .company-info_column {
+        clear: both;
+        margin-bottom: 25px;
+    }
+}
+
+footer {
+    .company-info_column {
+        .brand-logo {
+            color: $brandWhite;
+        }
+    }
+    .footer-column.grid_option {
+    flex-basis: 25%;
+    }
+    .grid_option.large-container {
+        flex-basis: 42%;
+    }
+}
+
+.footer-company-description {
+    margin-bottom: 50px;
+}
+
+.footer-header {
+    color: $brandWhite;
+    margin-bottom: 50px;
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(50,48,48);
+    padding: 25px 0;
+    .footer_social-media {
+        flex-basis: 20%;
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
