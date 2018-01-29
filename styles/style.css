@@ -317,6 +317,8 @@ input[type=email] {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 12.5px 0; }
 
 .contact-menu_contact-info,
@@ -366,6 +368,15 @@ input[type=email] {
     align-items: center;
     -ms-flex-preferred-size: 22.5%;
     flex-basis: 22.5%; }
+  .contact-menu_nav .contact-menu_nav_language-pref {
+    position: relative; }
+
+.fa.fa-caret-down {
+  position: absolute;
+  bottom: 5px;
+  right: -10px;
+  font-size: 1.2rem;
+  color: #6f6f6f; }
 
 .contact-menu_nav ul {
   -ms-flex-preferred-size: 60%;
@@ -373,7 +384,7 @@ input[type=email] {
   .contact-menu_nav ul li a {
     color: #222222; }
     .contact-menu_nav ul li a:hover, .contact-menu_nav ul li a:focus {
-      color: salmon; }
+      border-bottom: 1px solid #2a86fa; }
 
 .company-info-container {
   display: -webkit-box;
@@ -385,6 +396,8 @@ input[type=email] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: 15px 0; }
   .company-info-container .company-info_column {
     -ms-flex-preferred-size: calc(54% / 2);

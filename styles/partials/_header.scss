@@ -7,6 +7,7 @@
 .contact-menu_container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 12.5px 0;
 }
 
@@ -41,6 +42,17 @@
         align-items: center;
         flex-basis: 22.5%;
     }
+    .contact-menu_nav_language-pref {
+        position: relative
+    }
+}
+
+.fa.fa-caret-down {
+    position: absolute;
+    bottom: 5px;
+    right: -10px;
+    font-size: 1.2rem;
+    color: $brandDarkGrey;
 }
 
 .contact-menu_nav {
@@ -50,7 +62,7 @@
             color: $brandBlack;
             &:hover,
             &:focus {
-                color: salmon;
+                border-bottom: 1px solid $brandBlue;
             }
         }
     }
@@ -63,6 +75,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 15px 0;
     .company-info_column {
         flex-basis: calc(54% / 2);
