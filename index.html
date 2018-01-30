@@ -22,7 +22,7 @@
                     </div>
                     <div class="contact-menu_contact-info_option large-column">
                         <div class="icon">
-                            <img src="assets/express-post.svg" alt="Phone">
+                            <img src="assets/express-post.svg" alt="Phlargeone">
                         </div>
                         <p>Perfect_help@gmail.com</p>
                     </div>
@@ -36,9 +36,6 @@
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </div>
                     <input class="menu-btn" type="checkbox" id="menu-btn"/>
-                    <label class="menu-icon" for="menu-btn">
-                        <span class="navicon"></span>
-                    </label>
                     <ul>
                         <li><a href="">About</a></li>
                         <li><a href="">Claim&Policy</a></li>
@@ -87,8 +84,11 @@
 <!-- Main Nav Bar -->
         <nav>
             <div class="wrapper nav-bar">
-                <div class="nav_column">
-                    <ul>
+                <label id="toggle" for="menu-icon">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                <div class="nav_column responsive_nav">
+                    <ul class="target">
                         <li><a href="">home</a></li>
                         <li><a href="#about-us">about us</a></li>
                         <li><a href="#services">services</a></li>
@@ -98,7 +98,7 @@
                         <li class="contact-us"><a href="">Contact</a></li>
                     </ul>
                 </div>
-                <div class="nav_column">
+                <div class="nav_column shopping_cart">
                     <img src="assets/shop-bag.svg" alt="Shopping bag">
                     <i class="fa fa-search" aria-hidden="true"></i>
                 </div>
@@ -135,6 +135,7 @@
     </header>
 <!-- End of the Header section -->
     <main>
+<!-- About Us section -->
         <section id="about-us" class="about-us">
             <div class="wrapper">
                 <div class="article-container">
@@ -152,14 +153,13 @@
                         <h4>Our Free Offer</h4>
                         <p>Helping you get the greatest strategic advantage from your data management environment.</p>
                         <p>We then work with your key stakeholders to develop actionable recommendation along with design.</p>
-                        <!-- <div>
-                            <i class="fa fa-long-arrow-right" class="colour-emphasize" aria-hidden="true"></i> -->
-                            <a href="" class="action">Free Consultation</a>
-                        <!-- </div> -->
+                        <a href="" class="action">Free Consultation</a>
                     </div>
                 </div>
             </div>
         </section>
+<!-- End of About Us section -->
+<!-- Our Services section -->
         <section id="services" class="our-services">
             <div class="wrapper">
                 <div class="options-container">
@@ -339,17 +339,16 @@
                     <h2 class="colour-emphasize">Latest News</h2>
                 </div>
                 <div class="options-container_info">
-                    <p class="introduction">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita molestias impedit fugiat officiis doloribus rem optio
-                        fugit ex molestiae perspiciatis.</p>
+                    <p class="introduction">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita molestias impedit fugiat officiis doloribus rem optio fugit ex molestiae perspiciatis.</p>
                     <a href="" class="action colour-emphasize">More News</a>
                 </div>
                 <div class="grid">
                     <div class="grid_option">
                         <div class="news-image">
                             <img src="assets/news-1.jpg" alt="Young woman in front of a desktop">
-                            <figcaption>
+                            <div class="image-cover">
                                 <img src="assets/link.png" alt="link icon">
-                            </figcaption>
+                            </div>
                         </div>
                         <p class="colour-emphasize">Consulting Reports Third Quarter 2017 Financial Results</p>
                         <p>For the quarter, revenues of $449.0 million increased $10.9 million, or 2.5% .....</p>
@@ -358,9 +357,9 @@
                     <div class="grid_option">
                         <div class="news-image">
                             <img src="assets/news-2.jpg" alt="Two Mac laptops">
-                            <figcaption>
+                            <div class="image-cover">
                                 <img src="assets/link.png" alt="link icon">
-                            </figcaption>
+                            </div>
                         </div>
                         <p class="colour-emphasize">Accounting, Legal, Engineering, Dental, Architectural ....</p>
                         <p>For the quarter, revenues of $449.0 million increased $10.9 million, or 2.5% .....</p>
@@ -369,9 +368,9 @@
                     <div class="grid_option">
                         <div class="news-image">
                             <img src="assets/news-3.jpg" alt="Young man working on Mac">
-                            <figcaption>
+                            <div class="image-cover">
                                 <img src="assets/link.png" alt="link icon">
-                            </figcaption>
+                            </div>
                         </div>
                         <p class="colour-emphasize">When a business can no longer meet the demands of its short/long term</p>
                         <p>For the quarter, revenues of $449.0 million increased $10.9 million, or 2.5% .....</p>
@@ -480,11 +479,17 @@
 <!-- End of Footer -->
 <!-- Font Awesome script -->
 <script src="https://use.fontawesome.com/f45c9c96e9.js"></script>
+<!-- JQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Smooth Scroll cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
 <script>
+// Add class .visibility to the nav bar when menu-icon label is clicked for responsive design
+    $("label#toggle").click(function () {
+            $('ul.target').toggleClass('visibility');
+        });
+// Smooth Scroll at speed 500
     $(function () {
-        // console.log("sucess");
         $(".nav_column a").smoothScroll({
             speed: 500
         });

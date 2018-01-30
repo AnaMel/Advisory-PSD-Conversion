@@ -31,7 +31,7 @@
         justify-content: space-between;
     }
     @media (max-width: 768px) {
-        flex-direction: column;
+        display: none;
     }
     .contact-menu_contact-info_option {
         display: flex;
@@ -39,6 +39,11 @@
         align-items: center;
         flex-basis: calc(40% - 10px);
         flex-wrap: wrap;
+        img {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
         @media (max-width: 768px) {
                 justify-content: flex-end;
                 // color: $brandWhite;
@@ -77,6 +82,9 @@
         position: relative;
         @media (max-width: 1300px) {
             flex-basis: 10%;
+        }
+        @media (max-width: 550px) {
+            order: 1;
         }
         @media (max-width: 480px) {
             flex-basis: 100%;
@@ -248,7 +256,7 @@
     }
 }
 
-.nav_column:first-child {
+.responsive_nav{
     flex-basis: 50%;
     @media (max-width: 1300px) {
         width: 100%;
@@ -262,7 +270,7 @@
     }
 }
 
-.nav_column:nth-child(2) {
+.shopping_cart {
     flex-basis: 12%;
     display: flex;
     justify-content: space-around;
@@ -353,4 +361,63 @@
 
 .fa.fa-angle-right {
     background-color: $brandBlue;
+}
+
+
+// Hamburger Menu
+input[type="checkbox"] {
+    display: none;
+}
+
+// input[type='checkbox']:checked + .nav_column ul{
+// 			top:0;
+// }
+        
+label {display: none;
+@media (max-width: 550px) {
+        display: block;
+    }}
+// .fa.fa-bars{
+//     // visibility: hidden;
+//     display: none;
+//     @media (max-width: 480px) {
+//         display: block;
+//     }
+// }
+
+.fa.fa-bars {
+    font-size: 3rem;
+    color: $brandWhite;
+}
+
+ul.target {
+    position: relative;
+    transition: all 0.5s ease-in;
+}
+ul.target {
+    @media (max-width: 550px) {
+        visibility: hidden;
+        // display: none;
+        opacity: 0;
+        top: -10px;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 15px;
+        height: 0;
+    }
+    
+}
+
+.target.visibility {
+    visibility: visible;
+    // display: block;
+    opacity: 1;
+    top: 15px;
+    height: 250px;
+}
+
+.shopping_cart {
+    @media (max-width: 550px) {
+    display: none;
+    }
 }

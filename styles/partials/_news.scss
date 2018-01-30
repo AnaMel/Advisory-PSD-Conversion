@@ -2,7 +2,7 @@
     max-width: 350px;
     position: relative;
     transition: all 1s;
-    figcaption {
+    .image-cover {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,7 +20,7 @@
             max-width: 30px;
         }
     }
-    &:hover figcaption {
+    &:hover .image-cover {
         visibility: visible;
         opacity: 1;
     }

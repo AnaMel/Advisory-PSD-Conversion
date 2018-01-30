@@ -465,10 +465,7 @@ a.action::before {
       justify-content: space-between; } }
   @media (max-width: 768px) {
     .contact-menu_contact-info {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
+      display: none; } }
   .contact-menu_contact-info .contact-menu_contact-info_option {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -483,6 +480,9 @@ a.action::before {
     flex-basis: calc(40% - 10px);
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .contact-menu_contact-info .contact-menu_contact-info_option img {
+        display: none; } }
     @media (max-width: 768px) {
       .contact-menu_contact-info .contact-menu_contact-info_option {
         -webkit-box-pack: end;
@@ -533,6 +533,11 @@ a.action::before {
       .contact-menu_nav .contact-menu_nav_language-pref {
         -ms-flex-preferred-size: 10%;
         flex-basis: 10%; } }
+    @media (max-width: 550px) {
+      .contact-menu_nav .contact-menu_nav_language-pref {
+        -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+        order: 1; } }
     @media (max-width: 480px) {
       .contact-menu_nav .contact-menu_nav_language-pref {
         -ms-flex-preferred-size: 100%;
@@ -699,22 +704,22 @@ a.action::before {
     .nav-bar ul li:not(:last-child) {
       text-transform: uppercase; }
 
-.nav_column:first-child {
+.responsive_nav {
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%; }
   @media (max-width: 1300px) {
-    .nav_column:first-child {
+    .responsive_nav {
       width: 100%;
       margin-bottom: 15px; } }
   @media (max-width: 550px) {
-    .nav_column:first-child ul {
+    .responsive_nav ul {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
       text-align: center; } }
 
-.nav_column:nth-child(2) {
+.shopping_cart {
   -ms-flex-preferred-size: 12%;
   flex-basis: 12%;
   display: -webkit-box;
@@ -725,10 +730,10 @@ a.action::before {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .nav_column:nth-child(2) img {
+  .shopping_cart img {
     max-width: 40px; }
   @media (max-width: 1300px) {
-    .nav_column:nth-child(2) {
+    .shopping_cart {
       width: 60%; } }
 
 .nav_column:last-child {
@@ -824,6 +829,48 @@ a.action::before {
 
 .fa.fa-angle-right {
   background-color: #2a86fa; }
+
+input[type="checkbox"] {
+  display: none; }
+
+label {
+  display: none; }
+  @media (max-width: 550px) {
+    label {
+      display: block; } }
+
+.fa.fa-bars {
+  font-size: 3rem;
+  color: #fcfcfc; }
+
+ul.target {
+  position: relative;
+  -webkit-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in; }
+
+@media (max-width: 550px) {
+  ul.target {
+    visibility: hidden;
+    opacity: 0;
+    top: -10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 15px;
+    height: 0; } }
+
+.target.visibility {
+  visibility: visible;
+  opacity: 1;
+  top: 15px;
+  height: 250px; }
+
+@media (max-width: 550px) {
+  .shopping_cart {
+    display: none; } }
 
 .about-us {
   background-image: url(../assets/circle.png);
@@ -1113,7 +1160,7 @@ a.action::before {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s; }
-  .news-image figcaption {
+  .news-image .image-cover {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1137,9 +1184,9 @@ a.action::before {
     -webkit-transition: all 1s;
     -o-transition: all 1s;
     transition: all 1s; }
-    .news-image figcaption img {
+    .news-image .image-cover img {
       max-width: 30px; }
-  .news-image:hover figcaption {
+  .news-image:hover .image-cover {
     visibility: visible;
     opacity: 1; }
 
@@ -1262,7 +1309,7 @@ footer .grid_option:nth-child(3) p.introduction.colour-emphasize, footer .news .
   margin-bottom: 15px; }
 
 footer .grid_option:nth-child(3) p.date {
-  margin-bottom: 50px; }
+  margin-bottom: 40px; }
 
 .footer-company-description {
   margin-bottom: 50px; }
