@@ -1,20 +1,54 @@
 .news-image {
-    max-width: 300px;
+    max-width: 350px;
+    position: relative;
+    transition: all 1s;
+    figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(rgba(61,143,247,0.8),rgba(61,143,247,0.8));
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+
+        img {
+            max-width: 30px;
+        }
+    }
+    &:hover figcaption {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
+
+
 .news {
+    .options-container_info {
+        margin-bottom: 90px;
+    }
     .options-container_header::after {
         content: 'B';
-        // position: absolute;
-        // right: 50%;
         color: $brandGrey;
-        // left: 43%;
-        // bottom: -60px;
     }
     h2::after {
         content: url(../assets/blue-line.png);
         position: absolute;
         bottom: -15px;
         right: 45%;
+    }
+    .grid_option {
+        p {
+            margin-top: 20px;
         }
+        p.colour-emphasize:not(.date) {
+            @extend .introduction;
+            font-weight: 600;
+        }
+    }
 }

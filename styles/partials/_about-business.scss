@@ -25,13 +25,21 @@
         margin-bottom: 50px;
         .grid_option {
             border: 1px solid $brandGrey;
-            padding: 25px 15px;
+            padding: 35px 25px;
             display: flex;
             flex-direction: column;
+            transition: all 0.5s;
+            &:hover {
+                border-left: 1px solid $brandBlue;
+            }
+            &:hover h4 {
+                color: $brandBlue;
+            }
             @media (max-width: 480px) {
                 width: 100%;
             }
         }
+
     }
 }
 

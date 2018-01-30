@@ -5,8 +5,26 @@ footer {
     .grid {
         margin-bottom: 50px;
     }
+    li {
+        @media (max-width: 480px) {
+            text-align: center;
+        }
+        a {
+            &:hover,
+            &:focus {
+            color: $brandBlue;
+             }
+        }
+    
+    }
+    .action::before {
+            content: url(../assets/short-white-arrow.png);
+            position: relative;
+            right: 25px;
+    }
     p,
     li a {
+        font-size: 1.6rem;
         color: rgb(121,121,121);
     }
     .contact-details {
@@ -41,6 +59,10 @@ footer {
         clear: both;
         margin-bottom: 25px;
     }
+    p.introduction {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
 }
 
 footer {
@@ -50,10 +72,27 @@ footer {
         }
     }
     .footer-column.grid_option {
-    flex-basis: 25%;
+        flex-basis: 25%;
+        @media (max-width: 940px) {
+            flex-basis: 50%;
+        }
+        @media (max-width: 480px) {
+            flex-basis: 100%;
+        }
     }
-    .grid_option.large-container {
-        flex-basis: 42%;
+    .grid_option:nth-child(1) {
+        flex-basis: 33.3%;
+        @media (max-width: 940px) {
+            flex-basis: 100%;
+        }
+    }
+    .grid_option:nth-child(3) {
+        p.introduction.colour-emphasize {
+            margin-bottom: 15px;
+        }
+        p.date {
+            margin-bottom: 50px;
+        }
     }
 }
 
@@ -66,16 +105,46 @@ footer {
     margin-bottom: 50px;
 }
 
+p.introduction.footer-header {
+    font-size: 1.8rem;
+}
+
 .copyright-container {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid rgb(50,48,48);
     padding: 25px 0;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     .footer_social-media {
         flex-basis: 20%;
         ul {
             display: flex;
             justify-content: space-between;
         }
+    }
+}
+
+.icon-container {
+    min-height: 48px;
+    background-color: $brandBlue;
+    border-radius: 20px;
+    float: left;
+    position: relative;
+    right: 30px;
+    width: 25%;
+    max-width: 88px;
+}
+.fa.fa-paper-plane-o {
+    font-size: 1.8rem;
+    color: $brandWhite;
+    padding: 15px 0 10px;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+    &:hover,
+    &:focus  {
+        color: salmon;
     }
 }
