@@ -1,22 +1,29 @@
 .statistics {
     background-color: $statisticsBackground;
     display: flex;
+    flex-wrap: wrap;
+    @media (max-width: 480px) {
+        flex-direction: column;
+    }
     .statistics_example {
         flex-basis: 25%;
         padding: 50px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-basis: 50%;
+        }
         img {
             max-width: 50px;
         }
         .accomplishment {
             color: $brandWhite;
-            @include paragraph(2rem, $brandWhite);
+            @include paragraph(2.2rem, $brandWhite);
             margin: 20px 0;
         }
         .numbers {
-            font-size: 4rem;
+            font-size: 4.4rem;
             font-weight: 700;
             font-family: 'Poppins', sans-serif;
         }

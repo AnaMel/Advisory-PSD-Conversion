@@ -29,12 +29,16 @@
                 </div>
                 <div class="contact-menu_nav">
                     <div class="contact-menu_nav_language-pref">
-                        <div>
+                        <div class="chineese-option">
                             <img src="assets/language-preference.png" alt="Chineese Language">
                         </div>
                         <p>English</p>
                         <i class="fa fa-caret-down" aria-hidden="true"></i>
                     </div>
+                    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+                    <label class="menu-icon" for="menu-btn">
+                        <span class="navicon"></span>
+                    </label>
                     <ul>
                         <li><a href="">About</a></li>
                         <li><a href="">Claim&Policy</a></li>
@@ -86,11 +90,11 @@
                 <div class="nav_column">
                     <ul>
                         <li><a href="">home</a></li>
-                        <li><a href="">about us</a></li>
-                        <li><a href="">services</a></li>
-                        <li><a href="">projects</a></li>
-                        <li><a href="">blog</a></li>
-                        <li><a href="">shop</a></li>
+                        <li><a href="#about-us">about us</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#blog">blog</a></li>
+                        <li><a href="#shop">shop</a></li>
                         <li class="contact-us"><a href="">Contact</a></li>
                     </ul>
                 </div>
@@ -113,40 +117,50 @@
 <!-- Main Content in the header -->
         <div class="header-content">
             <div class="carousel-control carousel-control-previous">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
             </div>
             <div class="carousel-control carousel-control-next">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
             </div>
             <div class="wrapper header-content-container">
                 <h1>Advisory Business Consulting Services</h1>
                 <p class="description">We offer consulting expertise in the areas of turnaround management, receiveships, and loan restructuring. Our services, through corporate renewal and recovery enable a return to profitability.</p>
-                <input type="submit" class="action" value="Meet Our Expert">
+                <button class="action clearfix">
+                    <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    <p>Meet Our Expert</p>
+                </button>
             </div>
         </div>
 <!-- End of Main Content section in the header -->
     </header>
 <!-- End of the Header section -->
     <main>
-        <section class="about-us">
+        <section id="about-us" class="about-us">
             <div class="wrapper">
                 <div class="article-container">
                     <div class="about-us_description">
                         <p class="header-description">We Help</p>
                         <h2>Highly collaborative and personalized business transformation consulting</h2>
                         <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quia consequuntur, deserunt modi quasi, eos, repellendus nisi quisquam temporibus minus incidunt ad eveniet libero pariatur amet laboriosam adipisci dolores officiis sequi? Cum amet quam quod nam!</p>
-                        <input type="submit" class="action" value="Read More">
+                        <!-- <input type="submit" class="action" value="Read More"> -->
+                        <button class="action">
+                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            <p>Read More</p>
+                        </button>
                     </div>
                     <div class="about-us_free-offer">
                         <h4>Our Free Offer</h4>
                         <p>Helping you get the greatest strategic advantage from your data management environment.</p>
                         <p>We then work with your key stakeholders to develop actionable recommendation along with design.</p>
-                        <a href="" class="action">Free Consultation</a>
+                        <!-- <div>
+                            <i class="fa fa-long-arrow-right" class="colour-emphasize" aria-hidden="true"></i> -->
+                            <a href="" class="action">Free Consultation</a>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
         </section>
-        <section class="our-services">
+        <section id="services" class="our-services">
             <div class="wrapper">
                 <div class="options-container">
                     <div class="options-container_header">
@@ -207,8 +221,8 @@
                 <div class="article-container">
                     <div class="about-business_description">
                         <h2>Why Choosing Advisory</h2>
-                        <p class="introduction colour-emphasize">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iusto!</p>
-                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum sequi labore id libero qui asperiores quibusdam! Odio blanditiis dolores necessitatibus culpa, impedit aperiam. Ipsum iure, laboriosam recusandae reiciendis assumenda eligendi facere est dolor placeat nulla beatae sunt minima repellendus.</p>
+                        <p class="introduction colour-emphasize">Our services, through corporate renewal and recovery, enable a return to profitability.</p>
+                        <p class="description">Advisory Business Consulting offers a wide range of services to businesses either before or during tough financial times. What sets us apart from other firms in the industry is over three decades of combined legal and business expertise. Whether your business is struggling to avoid bankruptcy or trying its best to prepare for it, we will provide the assistance you need to make the right decisions.</p>
                     </div>
                     <div class="about-business_image">
                         <img src="assets/about-business.jpg" alt="Colourful pattern">
@@ -279,7 +293,7 @@
         </section>
 <!-- End of Statistics section -->
 <!-- Portfolio section -->
-        <section class="portfolio">
+        <section id="projects" class="portfolio">
             <div class="wrapper options-container">
                 <div class="options-container_header">
                     <p class="header-description">What we done</p>
@@ -318,7 +332,7 @@
         </section>
 <!-- End of Testimonials section -->
 <!-- News section -->
-        <section class="news">
+        <section id="blog" class="news">
             <div class="wrapper options-container">
                 <div class="options-container_header">
                     <p class="header-description">From Our Blog</p>
@@ -361,10 +375,10 @@
 <!-- Brand Belt section -->
         <section class="brand-belt">
             <div class="wrapper grid">
-                <div class="brand-logo"><img src="assets/logo-1.svg" alt="group m logo"></div>
-                <div class="brand-logo"><img src="assets/logo-2.svg" alt="OXFAM logo"></div>
-                <div class="brand-logo"><img src="assets/logo-3.svg" alt="ANC logo"></div>
-                <div class="brand-logo"><img src="assets/logo-4.svg" alt="VMware logo"></div>
+                <div class="brand-name"><img src="assets/logo-1.svg" alt="group m logo"></div>
+                <div class="brand-name"><img src="assets/logo-2.svg" alt="OXFAM logo"></div>
+                <div class="brand-name"><img src="assets/logo-3.svg" alt="ANC logo"></div>
+                <div class="brand-name"><img src="assets/logo-4.svg" alt="VMware logo"></div>
             </div>
         </section>
 <!-- End of Brand Belt section -->
@@ -453,5 +467,15 @@
 <!-- End of Footer -->
 <!-- Font Awesome script -->
 <script src="https://use.fontawesome.com/f45c9c96e9.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
+<script>
+    $(function () {
+        // console.log("sucess");
+        $(".nav_column a").smoothScroll({
+            speed: 500
+        });
+    });	
+</script>
 </body>
 </html>

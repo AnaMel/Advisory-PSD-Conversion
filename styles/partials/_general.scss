@@ -3,13 +3,44 @@ html {
 }
 
 h1 {
-    @include headers(6rem, $brandWhite);
+    @include headers(7rem, $brandWhite);
+
+    @media (max-width: 940px) {
+        font-size: 4rem;
+    }
+    @media (max-width: 480px) {
+        font-size: 3rem;
+    }
 }
 
 h2 {
-    @include headers(4rem, $brandBlack);
+    @include headers(4.5rem, $brandBlack);
+    position: relative;
     // line-height: 1;
     // margin: 25px 0;
+}
+
+// h2::after{
+//     content: url(../assets/blue-line.png);
+//     position: absolute;
+//     bottom: -20px;
+//     right: 45%;
+// }
+
+.options-container_header::after {
+    content: 'S';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 20rem;
+    color: #fcfcfc;
+    z-index: 0;
+    line-height: 1;
+    // left: 43%;
+    bottom: -50px;
 }
 
 // h3 {
@@ -17,7 +48,7 @@ h2 {
 // }
 
 h4 {
-    @include headers(1.6rem, $brandBlack);
+    @include headers(1.8rem, $brandBlack);
     margin-bottom: 30px;
 }
 
@@ -37,23 +68,36 @@ a {
 ul {
     list-style: none;
     li a{
-        @include paragraph(1.6rem,$brandWhite)
+        @include paragraph(1.8rem,$brandWhite)
     }
 }
 
 body {
     background-color: $brandWhite;
+    font-size: 1.6rem;
 }
 
 .wrapper {
-    max-width: 1280px;
-    width: 65%;
+    max-width: 1170px;
+    // width: 65%;
     margin: 0 auto;
+    @media (max-width: 1300px) {
+        width: 95%;
+    }
+    @media (max-width: 940px) {
+        width: 80%;
+    }
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+    @media (max-width: 480px) {
+        width: 95%;
+    }
 }
 
 // General Color & Fonts
 .nav_column .fa {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: $brandWhite;
     &:hover,
     &:focus {
@@ -77,19 +121,38 @@ p.brand-logo {
 
 
 // Remove input[type=submit] default browser styles
-input {
+input,
+button {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
     border: none;
     padding: 10px 15px;
+    transition: 0.3s;
 }
 
 
-input[type=submit] {
-    width: 175px;
+input[type=submit],
+button {
+    width: 200px;
     @include paragraph(1.6rem, $brandWhite);
     background-color: $brandBlue;
+    border: 1px solid $brandBlue;
+}
+
+button:hover {
+    background-color: $brandWhite;
+    border: 1px solid $brandBlue;
+
+    p,
+    .fa.fa-long-arrow-right
+     {
+        color: $brandBlue;
+    }
+}
+
+button p {
+    @include paragraph(1.6rem, $brandWhite);
 }
 
 input[type=email] {
@@ -106,9 +169,13 @@ input[type=email] {
     margin: 75px 0;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+
     .header-description {
         margin-bottom: 25px;
-        @include headers(1.8rem, $brandBlue);
+        @include headers(2rem, $brandBlue);
     }
     .description {
         margin: 50px 0;
@@ -118,6 +185,16 @@ input[type=email] {
 .action {
     padding: 10px 25px;
     @include paragraph(1.8rem, $brandBlue);
+    .fa.fa-long-arrow-right,
+    p {
+        float: left;
+        width: calc(95% - 5px);
+    }
+    .fa.fa-long-arrow-right {
+        color: $brandWhite;
+        width: 5%;
+        margin: 8px 5px 0 0;
+    }
 }
 
 // General Styles for options/ gallery
@@ -129,10 +206,17 @@ input[type=email] {
     // justify-content: center;
     .options-container_header {
         text-align: center;
-        margin-bottom: 100px;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 0;
+        .header-description,
+        h2 {
+            position: relative;
+            z-index: 2;
+        }
         .header-description {
             margin-bottom: 10px;
-            @include headers(1.8rem, $brandBlack);
+            @include headers(2rem, $brandBlack);
             }
     }
 }
@@ -141,19 +225,49 @@ input[type=email] {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media (max-width: 480px) {
+            flex-direction: column;  
+            align-items: center;
+    }
     .grid_option {
-        flex-basis: calc(100% / 3 - 10px);
-        margin-bottom: 20px;
+        flex-basis: calc(100% / 3 - 20px);
+        margin-bottom: 30px;
+        p {
+            @media (max-width: 480px) {
+                text-align: center;
+            }
+        }
+        @media (max-width: 768px) {
+            flex-basis: calc(50% - 10px);
+        }
+        @media (max-width: 480px) {
+            flex-basis: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+        }
     }
 }
 
 .introduction {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 2;
 }
 
 .icon {
     margin-right: 10px;
+}
+
+a.action {
+        position: relative;
+    }
+    // .fa-long-arrow-right,
+a.action::before {
+    content: url(../assets/blue-arrow.png);
+    position: absolute;
+    left: 0;
+    top: 0;
 }

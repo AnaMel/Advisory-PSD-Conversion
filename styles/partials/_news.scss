@@ -1,3 +1,20 @@
 .news-image {
     max-width: 300px;
 }
+
+.news {
+    .options-container_header::after {
+        content: 'B';
+        // position: absolute;
+        // right: 50%;
+        color: $brandGrey;
+        // left: 43%;
+        // bottom: -60px;
+    }
+    h2::after {
+        content: url(../assets/blue-line.png);
+        position: absolute;
+        bottom: -15px;
+        right: 45%;
+        }
+}

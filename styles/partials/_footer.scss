@@ -18,10 +18,10 @@ footer {
         box-shadow: 0 35px 0 -15px rgb(63,62,62);
         .grid_option {
             margin: 0;
+            @media (max-width: 480px) {
+                margin-bottom: 35px;
+            }
         }
-    }
-    input {
-
     }
 }
 

@@ -1,8 +1,15 @@
 .about-business_description {
     flex-basis: calc(60% - 30px);
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        &::after {
+        content: url(../assets/blue-line.png);
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        }
     }
+    
 
     .description {
         margin: 25px 0 0;
@@ -21,6 +28,9 @@
             padding: 25px 15px;
             display: flex;
             flex-direction: column;
+            @media (max-width: 480px) {
+                width: 100%;
+            }
         }
     }
 }

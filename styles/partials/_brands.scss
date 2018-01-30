@@ -4,4 +4,25 @@
     background-color: $brandBlue;
     padding: 100px 0;
     align-items: baseline;
+    .grid {
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .brand-name {
+        margin-bottom: 25px;
+        img {
+            @media (max-width: 480px) {
+                max-width: 128px;
+            }
+            // max-width: 100px;
+        }
+        // flex-basis: 25%;
+        @media (max-width: 940px) {
+            // flex-basis: 50%;
+        }
+        @media (max-width: 768px) {}
+        @media (max-width: 480px) {}
+    }
 }

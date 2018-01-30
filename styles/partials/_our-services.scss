@@ -2,6 +2,15 @@
 
 .our-services {
     background-color: $brandGrey;
+    background-image: url(../assets/reversed-circle.png);
+    background-repeat: no-repeat;
+    background-position: bottom 10px right;
+    h2::after {
+        content: url(../assets/blue-line.png);
+        position: absolute;
+        bottom: -15px;
+        right: 45%;
+        }
     .grid_option {
         // flex-basis: ()
         background-color: $brandWhite;
@@ -9,9 +18,31 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        transition: 1.2s;
+        border: 1px solid $brandWhite;
+        &:hover {
+            transform: scale(1.1);
+            border: 1px solid $brandBlue;
+            background-color: rgba(42,134,250,0.4);
+            // box-shadow: 5px 5px 10 10 $brandWhite;
+        }
+        &:hover  p {
+            color: $brandWhite;
+        }
+        @media (max-width: 480px) {
+            &:hover {
+                transform: none;
+            }
+        }
+        
         .grid_option_name {
             margin-bottom: 25px;
             @include paragraph(2.2rem, $brandBlack);
+
+            @media (max-width: 768px) {
+                @include paragraph(2rem, $brandBlack);
+            }
+
         }
         img {
             margin-bottom: 15px;
