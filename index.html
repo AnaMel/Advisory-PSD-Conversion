@@ -83,8 +83,11 @@
 <!-- Main Nav Bar -->
         <nav>
             <div class="wrapper nav-bar">
-                <label id="toggle" for="menu-icon">
+                <label class="toggle" for="menu-icon">
                     <i class="fa fa-bars" aria-hidden="true"></i>
+                </label>
+                <label class="toggle-back hide" for="menu-icon">
+                    <i class="fa fa-times" aria-hidden="true"></i>
                 </label>
                 <div class="nav_column responsive_nav">
                     <ul class="target">
@@ -484,9 +487,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
 <script>
 // Add class .visibility to the nav bar when menu-icon label is clicked for responsive design
-    $("label#toggle").click(function () {
+    $("label.toggle").click(function () {
             $('ul.target').toggleClass('visibility');
+            $('label.toggle-back').toggleClass('hide');
+            $('label.toggle').toggleClass('hide');
         });
+    $("label.toggle-back").click(function () {
+            $('ul.target').toggleClass('visibility');
+            $('label.toggle-back').toggleClass('hide');
+            $('label.toggle').toggleClass('hide');
+        });
+// Ensure that class .hide is removed from menu icon if the screen is resized into desktop view when the menu is open
+    var toggle = $('label.toggle');
+    var toggleBack = $('label.toggle-back');    
+    var ul = $('ul.target');
+
+    //get the screen width
+    $(window).resize(function(){
+        var screenWidth = $(this).width();
+        if(screenWidth > 480 ) {
+            toggleBack.addClass('hide');
+            toggle.removeClass('hide');
+            ul.removeClass('visibility');
+        }
+    });
+   
 // Smooth Scroll at speed 500
     $(function () {
         $(".nav_column a").smoothScroll({

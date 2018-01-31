@@ -340,14 +340,23 @@
 
 
 // Responsive Hamburger Menu
-label {
+label.toggle {
     display: none;
     @media (max-width: 550px) {
         display: block;
     }
 }
 
-.fa.fa-bars {
+label.hide {
+    display: none;
+}
+
+// label.toggle-back.hide {
+//     display: none;
+// }
+
+.fa.fa-bars,
+.fa.fa-times {
     font-size: 3rem;
     color: $brandWhite;
 }
@@ -374,6 +383,10 @@ ul.target {
     opacity: 1;
     top: 15px;
     height: 250px;
+}
+
+.toggle-back.show {
+    display: block;
 }
 
 .shopping_cart {
