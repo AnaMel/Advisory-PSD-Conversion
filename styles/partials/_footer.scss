@@ -1,5 +1,4 @@
 // Footer section styles
-
 footer {
     background-color: $brandLightenBlack;
     .grid {
@@ -13,14 +12,13 @@ footer {
             &:hover,
             &:focus {
             color: $brandBlue;
-             }
+            }
         }
-    
     }
     .action::before {
-            content: url(../assets/short-white-arrow.png);
-            position: relative;
-            right: 25px;
+        content: url(../assets/short-white-arrow.png);
+        position: relative;
+        right: 25px;
     }
     p,
     li a {
@@ -44,15 +42,15 @@ footer {
 }
 
 .footer_contact-details_option {
-        display: flex;
-        justify-content: center;
-        .icon {
-            margin-right: 15px;
-        }
-        p {
-            color: $brandWhite;
-        }
+    display: flex;
+    justify-content: center;
+    .icon {
+        margin-right: 15px;
     }
+    p {
+        color: $brandWhite;
+    }
+}
 
 .footer-column {
     .company-info_column {
@@ -136,6 +134,7 @@ p.introduction.footer-header {
     width: 25%;
     max-width: 88px;
 }
+
 .fa.fa-paper-plane-o {
     font-size: 1.8rem;
     color: $brandWhite;

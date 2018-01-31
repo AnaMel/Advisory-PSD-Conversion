@@ -1,3 +1,4 @@
+// Portfolio section styles
 .options-container_info {
     display: flex;
     justify-content: space-between;
@@ -13,20 +14,16 @@
         top: 8px;
     }
 }
+
 .portfolio {
     .options-container_header::after {
         content: 'P';
-        // position: absolute;
-        // right: 50%;
         color: $brandGrey;
-        // left: 43%;
-        // bottom: -60px;
-
     }
     h2::after {
         content: url(../assets/blue-line.png);
         position: absolute;
         bottom: -15px;
         right: 45%;
-        }
+    }
 }

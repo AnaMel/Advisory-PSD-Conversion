@@ -1,3 +1,4 @@
+// Statistics section styles
 .statistics {
     background-color: $statisticsBackground;
     display: flex;
@@ -10,7 +11,12 @@
         padding: 50px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-between; 
+        transition: 1s;
+        &:hover {
+            background-color: $brandButtonHover;
+            text-shadow: 0 0 7px black;
+        }
         @media (max-width: 768px) {
             flex-basis: 50%;
         }
@@ -28,4 +34,8 @@
             font-family: 'Poppins', sans-serif;
         }
     }
+}
+
+.statistics_example:not(:last-child) {
+    border-right: 1px solid #313f51;
 }

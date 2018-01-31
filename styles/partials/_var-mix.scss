@@ -1,4 +1,4 @@
-// Colours
+// Default Colours
 $brandBlue: rgb(42,134,250);
 $brandGrey: rgb(243,243,243);
 $brandBlack: rgb(34,34,34);
@@ -10,8 +10,7 @@ $brandButtonTextHover:rgb(11,85,99);
 $brandButtonHover: rgba(175,222,220,0.2);
 
 
-// Font families
-
+// Mixins to facilitate overwriting defaultl text styles across the webpage
 @mixin headers($font-size, $color) {
     font-family: 'Playfair Display', serif;
     font-weight: 700;

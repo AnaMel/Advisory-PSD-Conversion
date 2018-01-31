@@ -1,9 +1,9 @@
-// Background behind top Nav Bar
+// Firt Layer behind the container including company's contact information
 .contact-menu {
     background-color: $brandGrey;
 }
 
-// Nav Bar containing contact information
+// Container including company's contact information
 .contact-menu_container {
     display: flex;
     justify-content: space-between;
@@ -18,9 +18,6 @@
     @media (max-width: 1300px) {
         flex-basis: 100%;
     }
-    	@media (max-width: 940px) {}
-        @media (max-width: 768px) {}
-        @media (max-width: 480px) {}
 }
 
 .contact-menu_contact-info {
@@ -46,8 +43,6 @@
         }
         @media (max-width: 768px) {
                 justify-content: flex-end;
-                // color: $brandWhite;
-                // background-color: $brandWhite;
         }
     }
 }
@@ -67,7 +62,6 @@
     @media (max-width: 480px) {
         flex-direction: column;
     }
-
     .contact-menu_nav_language-pref,
     ul {
         display: flex;
@@ -122,8 +116,6 @@
     }
 }
 
-
-
 // Nav Bar company information
 .company-info-container {
     display: flex;
@@ -158,13 +150,11 @@
             margin-right: 0;
         }
     }
-
     .company-info_column:nth-child(3) {
         @media (max-width: 1300px) {
             justify-content: flex-end;
         }
     }
-
     .company-info_column:last-child {
         flex-basis: 20%;
         @media (max-width: 1300px) {
@@ -176,32 +166,27 @@
 }
 
 .brand-logo {
-        // float: left;
-        // width: 25%;
-        font-weight: 700;
-        line-height: 1;
-        margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5px;
 }
 
-// p.brand-logo {
-//         font-size: 3.2rem;
-// }
+
 .company-info_column_image {
-        float: left;
-        margin-right: 15px;
-        img {
-            min-width: 50px;
-        }
+    float: left;
+    margin-right: 15px;
+    img {
+        min-width: 50px;
     }
+}
 
 .company-info_column:first-child {
-.company-info_column_description{
-    float: left;
-    // margin-top: 20px;
-    p.brand-logo {
-        font-size: 3.2rem;
-}
-}
+    .company-info_column_description{
+        float: left;
+        p.brand-logo {
+            font-size: 3.2rem;
+        }
+    }
 }
 
 .company-info_column_description {
@@ -210,30 +195,22 @@
         font-size: 1.8rem;
     }
     p {
-        @media (max-width: 550px){
+        @media (max-width: 550px) {
             float: left;
             margin-right: 15px;
         }
     }
 }
 
-// .company-info_column_description + p {
-//     font-size: 1.8rem;
-// }
-
 .consultation-button {
     text-transform: uppercase;
     padding: 20px 30px;
     border: 2px solid $brandBlue;
-    // border-bottom-right-radius: 0;
-    // border-top-left-radius: 0;
     transition: 0.3s;
     &:hover,
     &:focus {
         color: $brandWhite;
         background-color: $brandBlue;
-        // padding: 11px 16px;
-        // border-top-left-radius: 25%;
     }
 }
 
@@ -306,7 +283,7 @@
     .carousel-control-previous,
     .carousel-control-next {
         position: absolute;
-        @media (max-width: 1300px){
+        @media (max-width: 1300px) {
             display: none;
         }
     }
@@ -323,11 +300,9 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    // align-items: center;
     @media (max-width: 1300px) {
         align-items: center;
         text-align: center;
-        // height: 100vh;
         margin-top: 25px;
     } 
     h1,
@@ -364,26 +339,13 @@
 }
 
 
-// Hamburger Menu
-input[type="checkbox"] {
+// Responsive Hamburger Menu
+label {
     display: none;
-}
-
-// input[type='checkbox']:checked + .nav_column ul{
-// 			top:0;
-// }
-        
-label {display: none;
-@media (max-width: 550px) {
+    @media (max-width: 550px) {
         display: block;
-    }}
-// .fa.fa-bars{
-//     // visibility: hidden;
-//     display: none;
-//     @media (max-width: 480px) {
-//         display: block;
-//     }
-// }
+    }
+}
 
 .fa.fa-bars {
     font-size: 3rem;
@@ -394,10 +356,10 @@ ul.target {
     position: relative;
     transition: all 0.5s ease-in;
 }
+
 ul.target {
     @media (max-width: 550px) {
         visibility: hidden;
-        // display: none;
         opacity: 0;
         top: -10px;
         flex-direction: column;
@@ -405,12 +367,10 @@ ul.target {
         margin-bottom: 15px;
         height: 0;
     }
-    
 }
 
 .target.visibility {
     visibility: visible;
-    // display: block;
     opacity: 1;
     top: 15px;
     height: 250px;

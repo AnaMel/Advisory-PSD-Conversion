@@ -1,5 +1,4 @@
-// Our Services section
-
+// Our Services section styles
 .our-services {
     background-color: $brandGrey;
     background-image: url(../assets/reversed-circle.png);
@@ -12,7 +11,6 @@
         right: 45%;
         }
     .grid_option {
-        // flex-basis: ()
         background-color: $brandWhite;
         padding: 75px 30px;
         display: flex;
@@ -24,7 +22,6 @@
             transform: scale(1.1);
             border: 1px solid $brandBlue;
             background-color: rgba(42,134,250,0.4);
-            // box-shadow: 5px 5px 10 10 $brandWhite;
         }
         &:hover  p {
             color: $brandWhite;
@@ -34,7 +31,6 @@
                 transform: none;
             }
         }
-        
         .grid_option_name {
             margin-bottom: 25px;
             @include paragraph(2.2rem, $brandBlack);
@@ -42,7 +38,6 @@
             @media (max-width: 768px) {
                 @include paragraph(2rem, $brandBlack);
             }
-
         }
         img {
             margin-bottom: 15px;

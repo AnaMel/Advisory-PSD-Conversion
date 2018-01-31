@@ -1,3 +1,4 @@
+// About Us section description
 .about-business_description {
     flex-basis: calc(60% - 30px);
     h2 {
@@ -9,8 +10,6 @@
         left: 0;
         }
     }
-    
-
     .description {
         margin: 25px 0 0;
     }
@@ -39,14 +38,13 @@
                 width: 100%;
             }
         }
-
     }
 }
 
 .option-header {
-            display: flex;
-            .option-header_img {
-                flex-basis: calc(15% - 10px);
-                margin-right: 10px;
-            }
-        }
+    display: flex;
+    .option-header_img {
+        flex-basis: calc(15% - 10px);
+        margin-right: 10px;
+    }
+}

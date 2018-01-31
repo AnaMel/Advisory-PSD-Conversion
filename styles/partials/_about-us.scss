@@ -1,3 +1,4 @@
+// About Us section styles
 .about-us {
     background-image: url(../assets/circle.png);
     background-repeat: no-repeat;
@@ -13,19 +14,6 @@
     padding: 30px 30px;
     background-color: $brandGrey;
     border-right: 1px solid $brandBlue;
-    // a.action {
-    //     position: relative;
-    // }
-    // // .fa-long-arrow-right,
-    // a.action::before {
-    //     content: url(../assets/blue-arrow.png);
-    //     position: absolute;
-    //     left: 0;
-    //     top: 0;
-    // }
-    // .fa-long-arrow-right {
-    //     margin-top: 9px;
-    // }
     p {
         margin-bottom: 25px;
     }
