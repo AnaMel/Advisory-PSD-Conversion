@@ -15,14 +15,14 @@
 .contact-menu_nav {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         flex-basis: 100%;
     }
 }
 
 .contact-menu_contact-info {
     flex-basis: 50%;
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         padding: 10px 0;
         flex-basis: 100%;
         justify-content: space-between;
@@ -49,14 +49,17 @@
 
 .contact-menu_contact-info_option.large-column {
     flex-basis: calc(60% - 10px);
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         justify-content: flex-end;
     }
 }
 
 .contact-menu_nav {
     flex-basis: 30%;
-    @media (max-width: 1300px) {
+    @media (max-width: 1200px) {
+        flex-basis: 40%;
+    }
+    @media (max-width: 940px) {
         flex-basis: 100%;
     }
     @media (max-width: 480px) {
@@ -74,7 +77,7 @@
     }
     .contact-menu_nav_language-pref {
         position: relative;
-        @media (max-width: 1300px) {
+        @media (max-width: 940px) {
             flex-basis: 10%;
         }
         @media (max-width: 550px) {
@@ -133,7 +136,7 @@
         img {
             max-width: 50px;
         }
-        @media (max-width: 1300px) {
+        @media (max-width: 940px) {
             flex-basis: 50%;
             justify-content: flex-start;
         }
@@ -144,20 +147,20 @@
     .company-info_column:first-child {
         flex-basis: calc(30% - 10px);
         margin-right: 10px;
-        @media (max-width: 1300px) {
+        @media (max-width: 940px) {
             order: -2;
             flex-basis: 50%;
             margin-right: 0;
         }
     }
     .company-info_column:nth-child(3) {
-        @media (max-width: 1300px) {
+        @media (max-width: 940px) {
             justify-content: flex-end;
         }
     }
     .company-info_column:last-child {
         flex-basis: 20%;
-        @media (max-width: 1300px) {
+        @media (max-width: 940px) {
             order: -1;
             flex-basis: 50%;
             justify-content: flex-end;
@@ -193,8 +196,14 @@
     float: left;
     p:first-child{
         font-size: 1.8rem;
+        @media (max-width: 1200px) {
+            font-size: 1.6rem;
+        }
     }
     p {
+        @media (max-width: 1200px) {
+            font-size: 1.4rem;
+        }
         @media (max-width: 550px) {
             float: left;
             margin-right: 15px;
@@ -212,6 +221,14 @@
         color: $brandWhite;
         background-color: $brandBlue;
     }
+    @media (max-width: 1200px) {
+        padding: 15px 10px;
+        font-size: 1.4rem;
+    }
+    @media (max-width: 1200px) and (min-width: 940px) {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 // Main Nav Bar
@@ -221,7 +238,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         flex-direction: column;
     }
     ul {
@@ -235,7 +252,10 @@
 
 .responsive_nav{
     flex-basis: 50%;
-    @media (max-width: 1300px) {
+    @media (max-width: 1200px) {
+        flex-basis: 60%;
+    }
+    @media (max-width: 940px) {
         width: 100%;
         margin-bottom: 15px;
     }
@@ -255,14 +275,14 @@
     img {
         max-width: 40px;
     }
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         width: 60%;
     }
 }
 
 .nav_column:last-child {
     flex-basis: 20%;
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         width: 50%;
     }
 }
@@ -277,13 +297,13 @@
     position: relative;
     display: flex;
     align-items: center;
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         align-items: flex-start;
     }
     .carousel-control-previous,
     .carousel-control-next {
         position: absolute;
-        @media (max-width: 1300px) {
+        @media (max-width: 940px) {
             display: none;
         }
     }
@@ -300,7 +320,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 60vh;
-    @media (max-width: 1300px) {
+    @media (max-width: 940px) {
         align-items: center;
         text-align: center;
         margin-top: 25px;
@@ -363,11 +383,11 @@ label.hide {
 
 ul.target {
     position: relative;
-    transition: all 0.5s ease-in;
+    transition: all 0.1s ease-in;
 }
 
 ul.target {
-    @media (max-width: 550px) {
+    @media (max-width: 768px) {
         visibility: hidden;
         opacity: 0;
         top: -10px;
